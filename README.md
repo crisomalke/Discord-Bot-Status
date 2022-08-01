@@ -14,4 +14,4 @@ const bot = "" //Enter the bot id
 const message = "" //Enter the message id
 const token = "" //Token of the bot
 ```
-After completing step #1 you need to run `node .` then it will start your bot and your bot become online.
+After filling all required information then you need to run `node .` then it will start your bot and your bot become online.
