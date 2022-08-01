@@ -95,4 +95,4 @@ if (!message.author.permissions.has("ADMINISTRATOR")) return message.reply(`${cl
     })
 
 
-client.login("MTAwMzU4Nzc2MDgzMTA5MDczOA.GpJXIO.iyBbdSFHH3bzVqBSjGo2XMv2BR07i8gZgUOrew")
+client.login("token")
