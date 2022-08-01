@@ -22,12 +22,14 @@ client.on("ready", () => {
       .setDescription(`The fields below will update when ${client.user.username} find any status updates in the bot.`)
         .addField("Bot Status", ":red_circle: Offline")
         .setColor("RED")
+        .setFooter("Coded by Criso#7107") //Note: Removing credits will result in a legal action.
         .setTimestamp()
       let online = new MessageEmbed()
-        .setTitle("**Dsco Status**")
+        .setTitle("**Status Panel**")
         .setDescription(`The fields below will update when ${client.user.username} find any status updates in the bot.`)
         .addField("Bot Status", ":green_circle: Online")
         .setColor("GREEN")
+        .setFooter("Coded by Criso#7107") //Note: Removing credits will result in a legal action.
         .setTimestamp()
 
       if (status === "online") {
@@ -48,6 +50,8 @@ client.on("ready", () => {
     }).catch(err => {})
   }, 5000) 
   console.log(`${client.user.tag} is ready!`)
+  console.log(`Coded by Criso#7107`)
+  console.log(`This code come under MIT LICENCE`)
 });
 
 client.on("message", async message => {
@@ -56,42 +60,14 @@ client.on("message", async message => {
 if (!message.author.permissions.has("ADMINISTRATOR")) return message.reply(`${client.emoji.wrong} **You can't use this command.**`)
     let execute = new MessageEmbed()
       .setTitle("Status Embed")
-      .setDescription("This embed will update when Dsco API found any status changes in our bot, website and api.")
+      .setDescription(`This embed will update when ${client.user.username} found any status changes in the bot.`)
       .setColor("BLURPLE")
+        .setFooter("Coded by Criso#7107") //Note: Removing credits will result in a legal action.
       .setTimestamp()
 
     return message.channel.send(execute)
 
-  }
-    if(message.content == 's!help') {
-        let embed = new MessageEmbed()
-        .setTitle("Help Menu")
-        .setDescription("I'm a Hosting Server Managee for Dsco. I have most of hosting features like status panel, console edition etc.")
-        .addField("Commands", "`s!status` - status panel\n`s!help` - help menu\n`s!start` - start the server\n`s!stop` - stop the server\n`s!console log` - send a cmd in console")
-        .setColor("BLURPLE")
-        .setFooter("Coded by Criso#7107")
-        message.reply({ embeds: [embed] })
-    }
-    if(message.content == 's!start') {
-        message.delete()
-    }
-    if(message.content == 's!msg') {
-        let imp_msg = message.content;
-        let embed = new MessageEmbed()
-        .setTitle("Important Message")
-        .setColor("BLURPLE")
-        
-        .setDescription(imp_msg.slice("s!msg").join(""))
-                        
-        
-       client.channels.cache.get("1003283868775895092").messages.fetch("1003609168143470653").then(msg => {
-           
-           msg.reply(embed)
-           message.reply("I have successfully sent the important message in status channel.")
-           }).catch(console.error)
-                                                                                                  
-       }
-    })
+  }    })
 
 
 client.login("token")
