@@ -1,33 +1,32 @@
 const { MessageEmbed } = require("discord.js")
 const discord = require("discord.js")
 const client = new discord.Client()
+const ch = "" //Enter the status channel id
+const guild = "" //Enter the server id
+const bot = "" //Enter the bot id 
+const message = "" //Enter the message id
 
 client.on("ready", () => {
 
   setInterval(function() {
 
-    let guild = client.guilds.cache.get("993881494319808574");
+    let guild = client.guilds.cache.get(guild);
 
-    let user = guild.members.cache.get("998536392676225054")
+    let user = guild.members.cache.get(bot)
     let status = user.presence.status
-    client.channels.cache.get("1003283868775895092").messages.fetch("1003609168143470653").then(msg => {
+    client.channels.cache.get(ch).messages.fetch("1003609168143470653").then(msg => {
 
       let offline = new MessageEmbed()
-        .setTitle("**Dsco Status**")
+        .setTitle("**Status Panel**")
       
-      .setDescription(`The fields below will update when **Dsco API** found any status changes in our website, api or discord bot.`)
-        .addField("Website Status", ":green_circle: Online")
+      .setDescription(`The fields below will update when ${client.user.username} find any status updates in the bot.`)
         .addField("Bot Status", ":red_circle: Offline")
-      .addField("API Status", ":green_circle: Online")
-        .setColor("GREEN")
+        .setColor("RED")
         .setTimestamp()
       let online = new MessageEmbed()
         .setTitle("**Dsco Status**")
-      
-      .setDescription(`The fields below will update when **Dsco API** found any status changes in our website, api or discord bot.`)
-        .addField("Website Status", ":green_circle: Online")
+        .setDescription(`The fields below will update when ${client.user.username} find any status updates in the bot.`)
         .addField("Bot Status", ":green_circle: Online")
-      .addField("API Status", ":green_circle: Online")
         .setColor("GREEN")
         .setTimestamp()
 
