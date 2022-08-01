@@ -1,7 +1,7 @@
 # Discord Bot Status
 A discord bot that allows you to create a status panel where it shows your another bot status.
 # Preview
-
+![Preview #1](https://raw.githubusercontent.com/crisodev/Discord-Bot-Status/main/Screenshot_20220801-184637.png)
 # Installation Guide
 ## Replit
 You can click [here](https://replit.com/github/crisodev/discord-bot-status) to get the code on your repl.
