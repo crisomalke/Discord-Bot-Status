@@ -19,4 +19,4 @@ After filling all required information then you need to run `node .` then it wil
 This bot coded by `Criso#7107` (me), must give me credit as using the code. Saying "It's coded by you" will result in a legal action as this code come under MIT LICENSE.
 # Want coding help?
 Join our discord server to get help about this code or any other.
-<a href="https://discord.gg/3JzDV9T5Fn"><img src="https://invidget.switchblade.xyz/7nxQdKJBbV" /></a>
+<a href="https://discord.gg/7nxQdKJBbV"><img src="https://invidget.switchblade.xyz/7nxQdKJBbV" /></a>
