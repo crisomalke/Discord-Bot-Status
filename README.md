@@ -21,7 +21,7 @@ This bot coded by `Criso#7107` (me), must give me credit as using the code. Sayi
 Join our discord server to get help about this code or any other.
 <a href="https://discord.gg/7nxQdKJBbV"><img src="https://invidget.switchblade.xyz/7nxQdKJBbV" /></a>
 
-# Update
+# Updates
 # Changelog 1.1
 - [x] Added `help` command
 - [ ] Added `setup` commands
