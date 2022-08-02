@@ -56,7 +56,7 @@ client.on("ready", () => {
 
 client.on("message", async message => {
 
-  if (message.content === "s!status") {
+  if(message.content === "s!status") {
 if (!message.author.permissions.has("ADMINISTRATOR")) return message.reply(`${client.emoji.wrong} **You can't use this command.**`)
     let execute = new MessageEmbed()
       .setTitle("Status Embed")
@@ -67,7 +67,16 @@ if (!message.author.permissions.has("ADMINISTRATOR")) return message.reply(`${cl
 
     return message.channel.send(execute)
 
-  }    })
+  }
+   if(message.content == 's!help') {
+        let embed = new MessageEmbed()
+        .setTitle("Help Menu")
+        .addField("Commands", "`s!status` - status panel\n`s!help` - help menu")
+        .setColor("BLURPLE")
+        .setFooter("Coded by Criso#7107")
+        message.reply({ embeds: [embed] })
+    }
+    })
 
 
 client.login("token")
